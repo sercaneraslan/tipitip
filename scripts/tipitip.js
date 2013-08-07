@@ -1,13 +1,15 @@
-/*
-*
-* Tipitip.js v1.0
-*
-* @sercaneraslan
-* @muratcorlu
-*
-* @sahibinden.com 2013
-*
-*/
+/**
+ *
+ * Tipitip.js v1.0
+ *
+ * @sercaneraslan
+ * @muratcorlu
+ * 
+ * @irfandurmus (http://irfandurmus.com) JSDoc'un ayrıştırabilmesi ve IDE'lerin tanıyabilmesi içi düzenleme yaptı
+ *
+ * @sahibinden.com 2013
+ *
+ */
 $(function() {
 
     var body = $("body"),
@@ -19,16 +21,18 @@ $(function() {
         elSelectorTitle,
         elEventOnload,
 
-        /*
-        *
-        * Tooltip (ipucu kutusu) pozisyonunun hesaplandigi alandir.
-        * elDataPos degiskenine tooltipin yon bilgisi gelir.
-        * posIndex objesinin elDataPos (yon bilgisine) degerine karsilik
-        * gelen 0. eleman top in, 1. eleman ise left in indeksi olur.
-        * Elde edilen top ya da left indeksini posTop ya da posLeft array ine
-        * göndererek ilgili pozisyonun hesaplanması saglanir.
-        *
-        */
+        /**
+         *
+         * Tooltip (ipucu kutusu) pozisyonunun hesaplandigi alandir.
+         * elDataPos degiskenine tooltipin yon bilgisi gelir.
+         * posIndex objesinin elDataPos (yon bilgisine) degerine karsilik
+         * gelen 0. eleman top in, 1. eleman ise left in indeksi olur.
+         * Elde edilen top ya da left indeksini posTop ya da posLeft array ine
+         * göndererek ilgili pozisyonun hesaplanması saglanir.
+         *
+         * @return {Object} top ve left elemanı olan bir obje döner.
+         *
+         */
 
         positionCalculator = function( el, elDataPos, tipitip ) {
 
@@ -70,6 +74,10 @@ $(function() {
             }
         },
 
+        /**
+         * @return undefined
+         *
+         */
         openEvent = function() {
 
             var el = $(this),
@@ -97,13 +105,13 @@ $(function() {
 
             ttIdDom.css( positionCalculator( el, elDataPos, ttIdDom ) ).show();
 
-            /*
-            *
-            * title ozniteliginin kendi kendine cikan varsayilan tooltipini engelemek icindir.
-            * mouse eleman üzerine geldiginde title da ki bilgiyi elSelectorTitle degiskenine gonderir
-            * ve title in icini temizler.
-            *
-            */
+            /**
+             *
+             * title ozniteliginin kendi kendine cikan varsayilan tooltipini engelemek icindir.
+             * mouse eleman üzerine geldiginde title da ki bilgiyi elSelectorTitle degiskenine gonderir
+             * ve title in icini temizler.
+             *
+             */
 
             if ( elTitle ) {
                 elSelectorTitle = elTitle;
@@ -111,29 +119,27 @@ $(function() {
             }
 
         },
+        
+        /**
+         *
+         * mouse eleman üzerinden gittiginde elSelectorTitle
+         * degiskeninden icerik alinir ve title a eklenir.
+         *
+         * Eger elemanin stayOpen ozelligi yoksa
+         * tooltip gizlenir.
+         *
+         * @return undefined
+         */
 
         closeEvent = function() {
 
             var el = $(this),
                 elTitle = el.attr("title");
 
-            /*
-            *
-            * mouse eleman üzerinden gittiginde elSelectorTitle
-            * degiskeninden icerik alinir ve title a eklenir.
-            *
-            */
 
             if ( elTitle === "" ) {
                 el.attr("title", elSelectorTitle);
             }
-
-            /*
-            *
-            * Eger elemanin stayOpen ozelligi yoksa
-            * tooltip gizlenir.
-            *
-            */
 
             if ( !el.data("stayOpen") ) {
                 $("#" + el.data("ttId") ).hide();
@@ -141,14 +147,14 @@ $(function() {
 
         };
 
-    /*
-    *
-    * .tipitip-trigger classi olan tum elemanlara eşsiz bir id ekler.
-    * data-onload u true olanlar icin openEvent direk fonksiyonunu cagrilir.
-    * Her bir elemanin openEvent leri ve closeEvent leri alinir
-    * ilgili elemana atanir.
-    *
-    */
+    /**
+     *
+     * .tipitip-trigger classi olan tum elemanlara eşsiz bir id ekler.
+     * data-onload u true olanlar icin openEvent direk fonksiyonunu cagrilir.
+     * Her bir elemanin openEvent leri ve closeEvent leri alinir
+     * ilgili elemana atanir.
+     *
+     */
 
     for ( i; i < selectorsLen; i++ ) {
 
