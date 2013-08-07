@@ -17,52 +17,56 @@
     <script src="jquery-tipitip/scripts/tipitip.js"></script>
   </head>
   <body>
+    <style>
+      a small {
+        margin-top: 0;
+      }
+    </style>
     <div class="wrapper">
       <header>
         <h1>Jquery-tipitip</h1>
         <p>jQuery ile kullanım için Sahibinden Tooltip eklentisi: Tipitip</p>
 
-        <p class="view"><a href="https://github.com/sahibinden/jquery-tipitip">View the Project on GitHub <small>sahibinden/jquery-tipitip</small></a></p>
+        <p class="view"><a href="https://github.com/sahibinden/jquery-tipitip">Projeyi GitHub üzerinde Görüntüle <small>sahibinden/jquery-tipitip</small></a></p>
 
 
         <ul>
-          <li><a href="https://github.com/sahibinden/jquery-tipitip/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/sahibinden/jquery-tipitip/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/sahibinden/jquery-tipitip">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/sahibinden/jquery-tipitip/zipball/master">İndir <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/sahibinden/jquery-tipitip/tarball/master">İndir <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/sahibinden/jquery-tipitip">Görüntüle <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
         <h1>
 <a name="tipitipjs" class="anchor" href="#tipitipjs"><span class="octicon octicon-link"></span></a>Tipitip.js</h1>
 
-<p>Tipitip, JavaScript ve CSS ile çalışan bir Tooltip (ipucu) kütüphanesidir. Tooltip'te hiçbir imaj kullanılmamıştır, saf CSS ile yazılmıştır. Diğer kütüphanelerin aksine ilgili sayfaya JavaScript ya da CSS kodu ekleyerek çalıştırılmaz, Tooltip göstermek istenilen elemena şu 3 özelliği ekleyerek JavaScript ya da CSS yazmadan Tooltip'i çalıştırabilirsiniz. ( tipitip.min.js ve tipitip.css dosyalarını sayfanıza eklemeyi unutmayınız.)</p>
+<p>Tipitip, JavaScript ve CSS ile çalışan bir Tooltip (ipucu) kütüphanesidir. Tooltip'te hiçbir imaj kullanılmamıştır, saf CSS ile yazılmıştır. Diğer kütüphanelerin aksine ilgili sayfaya JavaScript ya da CSS kodu ekleyerek çalıştırılmaz, Tooltip göstermek istenilen elemena şu 3 özelliği ekleyerek JavaScript ya da CSS yazmadan Tooltip'i çalıştırabilirsiniz. ( tipitip.min.js ve tipitip.css dosyalarını sayfanıza eklemeyi unutmayınız.) </p>
 
-<p>Not: Tooltip eklemek istediğiniz elemanın ne olduğu önemli değildir. (Örneğin; a, span, div, p vb etiketleri kullanabilirsiniz.)</p>
-
-<p>Tooltip eklemek istediğiniz elemana tipitip-trigger class'ı eklenmeli. (Tipitip.js bu class'a sahip olan eleman üzerinde çalışır.)</p>
-
-<p>Tooltip'in hangi yönden çıkacağı elemana data-position özniteliği eklenerek belirlenir. Varsayılan olarak "east" tir. Örneğin;</p>
+<p>Not: Tooltip eklemek istediğiniz elemanın ne olduğu önemli değildir. (Örneğin; a, span, div, p vb etiketleri kullanabilirsiniz.) </p>
 
 <ul>
-<li>data-position="north-west"</li>
-<li>data-position="north"</li>
-<li>data-position="north-east"</li>
-<li>data-position="east"</li>
-<li>data-position="west"</li>
-<li>data-position="south-west"</li>
-<li>data-position="south"</li>
-<li>data-position="south-east"</li>
-</ul><p>Ve son olarak Tooltip'in içeriğinin nereden alınacağı yazılır. ( title ya da data-content özniteliklerine içeriği yazabilirsiniz ya da data-target özniteliğine bir id ya da class ismi vererek o class 'a ya da id 'ye sahip elemanın içeriğini otomatik olarak almasını sağlayabilirsiniz. Örnek: data-target=".class-name" -  data-target="#id-name" )</p>
-
-<p>Not: data-target özniteliğini kullanırsanız id ya class verdiğiniz elemena "tipitip-target" class'ı ekleyerek o elemanın display: none; olmasını sağlayabilirsiniz.</p>
-
-<ul>
-<li><p>data-onload özniteliğine true değeri verilerek Tooltip'in sayfa yüklendiğinde açık olarak gelmesi sağlanabilir. Örnek kullanım: data-onload="true"</p></li>
-<li><p>data-class özniteliğine istediğiniz bir class'ı vererek Tooltip'de değişiklikler yapabilirsiniz. Örnek kullanım: data-class="custom-class"</p></li>
-<li><p>data-stay-open özniteliğine true değeri verilerek elemanın hover'ında Tooltip'in açık kalması sağlanabilir. Örnek kullanım: data-stay-open="true"</p></li>
-<li><p>data-open-event özniteliğine herhangi bir event yazılarak elemanın hangi event'te açılacağını belirtebilirsiniz. Örnek kullanım: data-open-event="focus"</p></li>
-<li><p>data-close-event özniteliğine herhangi bir event yazılarak elemanın hangi event'te kapatılacağını belirtebilirsiniz. Örnek kullanım: data-close-event="blur"</p></li>
+    <li>
+        Tooltip eklemek istediğiniz elemana <strong>tipitip-trigger</strong> class'ı eklenmeli. (Tipitip.js bu class'a sahip olan eleman üzerinde çalışır.)
+    </li>
+    <li>
+        Tooltip'in hangi yönden çıkacağı elemana <strong>data-position</strong> özniteliği eklenerek belirlenir. Varsayılan olarak "east" tir. ( <strong>data-position="north"</strong> , <strong>data-position="south-east"</strong> vb. ) Yönlerin tamamına aşağıda ki tablodan ulaşabilirsiniz.
+    </li>
+    <li>
+        Ve son olarak Tooltip'in içeriğinin nereden alınacağı yazılır. ( <strong>title</strong> ya da <strong>data-content</strong> özniteliklerine içeriği yazabilirsiniz ya da <strong>data-target</strong> özniteliğine bir id ya da class ismi vererek o class'a ya da id' ye sahip elemanın içeriğini otomatik olarak almasını sağlayabilirsiniz. Örnek: data-target=".class-name" -  data-target="#id-name" )
+    </li>
 </ul>
+
+<p>Not: <strong>data-target</strong> özniteliğini kullanırsanız id ya class verdiğiniz elemena <strong>"tipitip-target"</strong> class'ı ekleyerek o elemanın <strong>display: none;</strong> olmasını sağlayabilirsiniz. </p>
+
+<p>* <strong>data-onload</strong> özniteliğine <strong>true</strong> değeri verilerek Tooltip'in sayfa yüklendiğinde açık olarak gelmesi sağlanabilir. Örnek kullanım: <strong>data-onload="true"</strong> </p>
+
+<p>* <strong>data-class</strong> özniteliğine istediğiniz bir class'ı vererek Tooltip'de değişiklikler yapabilirsiniz. Örnek kullanım: <strong>data-class="custom-class"</strong> </p>
+
+<p>* <strong>data-stay-open</strong> özniteliğine <strong>true</strong> değeri verilerek elemanın hover'ında Tooltip'in açık kalması sağlanabilir. Örnek kullanım: <strong>data-stay-open="true"</strong> </p>
+
+<p>* <strong>data-open-event</strong> özniteliğine herhangi bir event yazılarak elemanın hangi event'te açılacağını belirtebilirsiniz. Örnek kullanım: <strong>data-open-event="focus"</strong> </p>
+
+<p>* <strong>data-close-event</strong> özniteliğine herhangi bir event yazılarak elemanın hangi event'te kapatılacağını belirtebilirsiniz. Örnek kullanım: <strong>data-close-event="blur"</strong> </p>
 
    <table>
         <tr>
@@ -107,8 +111,7 @@
 
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/sahibinden">sahibinden</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p>Bu bir <a href="https://github.com/sahibinden">@sahibinden</a> projesidir.</p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
