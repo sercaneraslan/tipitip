@@ -1,25 +1,17 @@
 #Tipitip.js
 
-Tipitip, JavaScript ve CSS ile çalışan bir Tooltip (ipucu) kütüphanesidir. Tooltip'te hiçbir imaj kullanılmamıştır, saf CSS ile yazılmıştır. Diğer kütüphanelerin aksine ilgili sayfaya JavaScript ya da CSS kodu ekleyerek çalıştırılmaz, Tooltip göstermek istenilen elemena şu 3 özelliği ekleyerek JavaScript ya da CSS yazmadan Tooltip'i çalıştırabilirsiniz. ( tipitip.min.js ve tipitip.css dosyalarını sayfanıza eklemeyi unutmayınız.)
+Tipitip, JavaScript ve CSS ile çalışan bir Tooltip (ipucu) kütüphanesidir. Tooltip'te hiçbir imaj kullanılmamıştır, saf CSS ile yazılmıştır. Diğer kütüphanelerin aksine ilgili sayfaya JavaScript ya da CSS kodu ekleyerek çalıştırılmaz.
 
-Not: Tooltip eklemek istediğiniz elemanın ne olduğu önemli değildir. (Örneğin; a, span, div, p vb etiketleri kullanabilirsiniz.)
+Çalışan halini görmek için <a href="http://sahibinden.github.io/jquery-tipitip/">buraya</a> tıklayabilirsiniz.
 
-Tooltip eklemek istediğiniz elemana tipitip-trigger class'ı eklenmeli. (Tipitip.js bu class'a sahip olan eleman üzerinde çalışır.)
-
-Tooltip'in hangi yönden çıkacağı elemana data-position özniteliği eklenerek belirlenir. Varsayılan olarak "east" tir. Örneğin;
-
-* data-position="north-west"
-* data-position="north"
-* data-position="north-east"
-* data-position="east"
-* data-position="west"
-* data-position="south-west"
-* data-position="south"
-* data-position="south-east"
+Tooltip göstermek istenilen elemena şu 3 özelliği ekleyerek JavaScript ya da CSS yazmadan Tooltip'i çalıştırabilirsiniz. ( tipitip.min.js ve tipitip.css dosyalarını sayfanıza eklemeyi unutmayınız.)
 
 
-Ve son olarak Tooltip'in içeriğinin nereden alınacağı yazılır. ( title ya da data-content özniteliklerine içeriği yazabilirsiniz ya da data-target özniteliğine bir id ya da class ismi vererek o class 'a ya da id 'ye sahip elemanın içeriğini otomatik olarak almasını sağlayabilirsiniz. Örnek: data-target=".class-name" -  data-target="#id-name" )
+* Tooltip eklemek istediğiniz elemana tipitip-trigger class'ı eklenmeli. (Tipitip.js bu class'a sahip olan eleman üzerinde çalışır.)
 
+* Tooltip'in hangi yönden çıkacağı elemana data-position özniteliği eklenerek belirlenir. Varsayılan olarak "east" tir. ( data-position="north" , data-position="south-east" vb. ) Yönlerin tamamına aşağıda ki tablodan ulaşabilirsiniz.
+
+* Ve son olarak Tooltip'in içeriğinin nereden alınacağı yazılır. ( title ya da data-content özniteliklerine içeriği yazabilirsiniz ya da data-target özniteliğine bir id ya da class ismi vererek o class'a ya da id' ye sahip elemanın içeriğini otomatik olarak almasını sağlayabilirsiniz. Örnek: data-target=".class-name" - data-target="#id-name" )
 
 Not: data-target özniteliğini kullanırsanız id ya class verdiğiniz elemena "tipitip-target" class'ı ekleyerek o elemanın display: none; olmasını sağlayabilirsiniz.
 
@@ -31,4 +23,7 @@ Not: data-target özniteliğini kullanırsanız id ya class verdiğiniz elemena 
 
 * data-open-event özniteliğine herhangi bir event yazılarak elemanın hangi event'te açılacağını belirtebilirsiniz. Örnek kullanım: data-open-event="focus"
 
-* data-close-event özniteliğine herhangi bir event yazılarak elemanın hangi event'te kapatılacağını belirtebilirsiniz. Örnek kullanım: data-close-event="blur"
+* data-close-event özniteliğine herhangi bir event yazılarak elemanın hangi event'te kapatılacağını belirtebilirsiniz. Örnek kullanım: data-close-event="blur" 
+
+
+Not: Tooltip eklemek istediğiniz elemanın ne olduğu önemli değildir. (Örneğin; a, span, div, p vb etiketleri kullanabilirsiniz.)
