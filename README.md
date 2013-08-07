@@ -10,7 +10,7 @@ Tooltip göstermek istenilen elemena şu 3 özelliği ekleyerek JavaScript ya da
 
 1. Tooltip eklemek istediğiniz elemana `tipitip-trigger` class'ı eklenmeli. (Tipitip.js bu class'a sahip olan eleman üzerinde çalışır.)
 
-2. Tooltip'in hangi yönden çıkacağı elemana `data-position` özniteliği eklenerek belirlenir. Varsayılan olarak "east" tir. ( `data-position="north"` , `data-position="south-east"` vb. ) Yönlerin tamamına aşağıda ki tablodan ulaşabilirsiniz.
+2. Tooltip'in hangi yönden çıkacağı elemana `data-position` özniteliği eklenerek belirlenir. Varsayılan olarak "east" tir. ( `data-position="north"` , `data-position="south-east"` vb. )
 
 3. Ve son olarak Tooltip'in içeriğinin nereden alınacağı yazılır. ( `title` ya da `data-content` özniteliklerine içeriği yazabilirsiniz ya da `data-target` özniteliğine bir id ya da class ismi vererek o class'a ya da id' ye sahip elemanın içeriğini otomatik olarak almasını sağlayabilirsiniz. Örnek: `data-target=".class-name"` ya da `data-target="#id-name"` )
 
