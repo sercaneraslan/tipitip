@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7,10 +7,14 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="jquery-tipitip/styles/tipitip.css">
+    <link rel="stylesheet" href="jquery-tipitip/docs/doc.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="jquery-tipitip/scripts/tipitip.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -59,6 +63,48 @@
 <li><p>data-open-event özniteliğine herhangi bir event yazılarak elemanın hangi event'te açılacağını belirtebilirsiniz. Örnek kullanım: data-open-event="focus"</p></li>
 <li><p>data-close-event özniteliğine herhangi bir event yazılarak elemanın hangi event'te kapatılacağını belirtebilirsiniz. Örnek kullanım: data-close-event="blur"</p></li>
 </ul>
+
+   <table>
+        <tr>
+            <td>
+                <a href="#" class="tipitip-trigger" data-position="north-west" title="Bu Tooltip'in içeriği title özniteliğinden alınmıştır. Pozisyonu ise north-west'tir.">north-west</a>
+            </td>
+            <td>
+                <span class="tipitip-trigger" data-position="north" data-content="Bu Tooltip'in içeriği data-content özniteliğinden alınmıştır. Pozisyonu ise north'tur.">north</span>
+            </td>
+            <td>
+                <span class="tipitip-trigger" data-position="north-east" data-target="#data-target-example">north-east</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <span class="tipitip-trigger" data-position="west" data-content="Bu Tooltip'in içeriği data-content özniteliğinden alınmıştır. Pozisyonu ise west'tir.">west</span>
+            </td>
+            <td></td>
+            <td>
+                <span class="tipitip-trigger" data-stay-open="true" data-onload="true" data-content="Bu Tooltip'in içeriği data-content özniteliğinden alınmıştır. data-stay-open ve data-onload özniteliklerini kullanmaktadır. Pozisyonu ise east'tir.">east</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <span class="tipitip-trigger" data-class="custom-class" data-position="south-west" data-content="Bu Tooltip'in içeriği data-content özniteliğinden alınmıştır. custom-class 'ı vardır. Pozisyonu ise south-west'tir.">south-west</span>
+            </td>
+            <td>
+                <span class="tipitip-trigger" data-position="south" data-content="Bu Tooltip'in içeriği data-content özniteliğinden alınmıştır. Pozisyonu ise south'tur.">south</span>
+            </td>
+            <td>
+                <span class="tipitip-trigger" data-position="south-east" data-content="Bu Tooltip'in içeriği data-content özniteliğinden alınmıştır. Pozisyonu ise south-east'tir.">south-east</span>
+            </td>
+        </tr>
+    </table>
+
+    <div id="data-target-example" class="tipitip-target">
+        <span>Bu Tooltip'in içeriği data-target özniteliği ile <strong>data-target-example</strong> id'li elemanın içinden alınmıştır. Pozisyonu ise north-east'tir.</span>
+    </div>
+
+
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/sahibinden">sahibinden</a></p>
