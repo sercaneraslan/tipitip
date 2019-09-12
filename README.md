@@ -2,7 +2,7 @@
 
 Tipitip, JavaScript ve CSS ile çalışan bir Tooltip (ipucu) kütüphanesidir. Tooltip'te hiçbir imaj kullanılmamış, saf CSS ile yazılmıştır. Diğer kütüphanelerin aksine ilgili sayfaya JavaScript ya da CSS kodu ekleyerek çalıştırılmaz.
 
-Çalışan halini <a href="http://sahibinden.github.io/jquery-tipitip/">sahibinden.github.io/jquery-tipitip/</a> adresinde görebilirsiniz.
+Çalışan halini <a href="https://sercaneraslan.github.io/jquery-tipitip/">sercaneraslan.github.io/jquery-tipitip/</a> adresinde görebilirsiniz.
 
 ## Kullanım
 
