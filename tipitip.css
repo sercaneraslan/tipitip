@@ -1,0 +1,97 @@
+/*
+*
+* Tipitip.js v1.0.1
+*
+*/
+.tipitip {
+    max-width: 250px;
+    padding: 9px 14px 12px;
+    background-color: #FFF;
+    border-radius: 2px;
+    border: 3px solid #8598aa;
+    box-shadow: 2px 2px 0 #dfdfdf;
+    font-size: 11px;
+    color: #5a5a5a;
+    line-height: 14px;
+    word-wrap: break-word;
+    position: absolute;
+    z-index: 99;
+}
+.tipitip:after {
+    content: " ";
+    border: solid transparent;
+    border-width: 12px;
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+/* Arrow Align */
+.tt-north-west,
+.tt-south-west {
+    margin-left: 15px;
+}
+.tt-north-east,
+.tt-south-east {
+    margin-left: -15px;
+}
+
+/* North Styles */
+.tt-north-west:after {
+    top: 100%;
+    right: 10px;
+}
+.tt-north:after {
+    top: 100%;
+    left: 50%;
+    margin: 0 0 0 -12px;
+}
+.tt-north-east:after {
+    top: 100%;
+    left: 10px;
+}
+.tt-north-west:after,
+.tt-north:after,
+.tt-north-east:after {
+    border-top-color: #8598aa;
+}
+
+/* South Styles */
+.tt-south-west:after {
+    bottom: 100%;
+    right: 10px;
+}
+.tt-south:after {
+    bottom: 100%;
+    left: 50%;
+    margin: 0 0 0 -12px;
+}
+.tt-south-east:after {
+    bottom: 100%;
+    left: 10px;
+}
+.tt-south-west:after,
+.tt-south:after,
+.tt-south-east:after {
+    border-bottom-color: #8598aa;
+}
+
+/* West and East Styles */
+.tt-west:after {
+    left: 100%;
+    top: 50%;
+    margin-top: -12px;
+    border-left-color: #8598aa;
+}
+.tt-east:after {
+    right: 100%;
+    top: 50%;
+    margin-top: -12px;
+    border-right-color: #8598aa;
+}
+
+/* Target Container */
+.tipitip-target {
+    display: none;
+}
