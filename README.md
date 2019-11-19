@@ -1,4 +1,4 @@
-#Tipitip.js
+# Tipitip.js
 
 Tipitip, JavaScript ve CSS ile çalışan bir Tooltip (ipucu) kütüphanesidir. Tooltip'te hiçbir imaj kullanılmamış, saf CSS ile yazılmıştır. Diğer kütüphanelerin aksine ilgili sayfaya JavaScript ya da CSS kodu ekleyerek çalıştırılmaz.
 
